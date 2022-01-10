@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">SNS</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <div class="alert alert-warning" role="alert">
+        {% for item in object_list %}  
+        <p>Title : {{ item.title }}</p>
+        <p>Contributer : {{ item.contributer }}</p>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
